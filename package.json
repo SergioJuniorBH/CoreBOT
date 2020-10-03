@@ -1,0 +1,16 @@
+{
+  "name": "ruivo",
+  "version": "1.0.0",
+  "description": "bot do ruivo para discord",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruivo",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
