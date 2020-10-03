@@ -21,7 +21,7 @@ exports.run = async (bot, message, args) => {
     .setThumbnail(member.avatarURL)
     .addField(`:question: - Quem aplicou?`, message.author.username, true)
     .addField(`:exclamation: - Motivo `, motivooooooo, true)
-    .setImage("https://media.tenor.com/images/048b3da98bfc09b882d3801cb8eb0c1f/tenor.gif")
+    .setImage("Imagem que você quiser")
     .setFooter(`Banido por: ${message.author.tag}`)
 
     message.channel.send(embed)
@@ -32,9 +32,9 @@ exports.run = async (bot, message, args) => {
     .setDescription(`:no_entry_sign: | Você foi Banido, do ${message.guild.name} achou que ia quebrar as regras e sair impune danadinho?! :no_entry_sign:`)
     .addField(`:question: - Quem aplicou?`, message.author.username, true)
     .addField(`:exclamation: -  Motivo `, motivooooooo, true)
-    .setImage('https://media.tenor.com/images/048b3da98bfc09b882d3801cb8eb0c1f/tenor.gif')
+    .setImage('Imagem que você quiser')
     
-    user.send(banidoDM)
+    user.send(banidoDM) //MENSAGEM QUE SERÁ ENVIADA AO PRIVADO DO MEMBRO QUE FOI BANIDO
 }
 
 exports.help = {
