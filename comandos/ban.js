@@ -34,7 +34,7 @@ exports.run = async (bot, message, args) => {
     .addField(`:exclamation: -  Motivo `, motivooooooo, true)
     .setImage('Imagem que você quiser')
     
-    user.send(banidoDM) //MENSAGEM QUE SERÁ ENVIADA AO PRIVADO DO MEMBRO QUE FOI BANIDO
+    user.send(banidoDM) //MENSAGEM QUE SERÁ ENVIADA AO PRIVADO DO MEMBRO QUE FOI BANIDO.
 }
 
 exports.help = {
