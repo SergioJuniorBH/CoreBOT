@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
         'https://pa1.narvii.com/6214/5c506d2760822b9bc97f30eebd75a31ae73a0b2a_hq.gif',
         'https://www.intoxianime.com/wp-content/uploads/2017/02/KuzunoHonkai-Episode5-Omake-3.gif',
         'https://media1.tenor.com/images/6f4bf3f4b957c8a3d560bcf2f62c2577/tenor.gif?itemid=5072833'
-    ];
+    ]; //LISTA DAS IMAGENS QUE VÃO FICAR NO EMBED ALEATORIAMENTE
 
     var rand = list[Math.floor(Math.random() * list.length)];
     let user = message.mentions.users.first() || bot.users.cache.get(args[0]);
