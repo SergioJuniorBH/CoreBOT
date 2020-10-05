@@ -63,8 +63,11 @@ bot.on('ready', () => {
 }); 
 
 bot.on('message', message => {
-    if (message.author.bot) return;
-    if (message.channel.type === "dm") return;
+    if (message.author.bot) return; //COMANDO PARA QUE QUANDO O AUTOR DA MENSAGEM FOR UM BOT ELE NÃO RESPONDER
+    if (message.channel.type === "dm") return; //COMANDO PARA QUANDO ALGUÉM MANDAR MENSAGEM NO PRIVADO DO SEU BOT ELE NÃO RESPONDER
+    if (message.content == `<${bot.user.id}>`|| message.content == `<@!${bot.user.id}>`) {
+        return message.channel.send(`Aqui vai a mensagem que você quiser`)
+    } //COMANDO PARA QUE QUANDO ALGUÉM MENCIONE O SEU BOT, ELE RESPONDER COM UMA MENSAGEM
 
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
