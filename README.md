@@ -24,6 +24,10 @@ I added the "Events" folder, made the commands more organized, added Aliases to 
 
 `$ npm install discord.js --save`
 
+# Core provisional website:
+
+http://eucore.glitch.me
+
 # For more information on creating a discord bot visit:
 
 www.discordjs.guide
