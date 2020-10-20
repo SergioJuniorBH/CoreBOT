@@ -12,4 +12,18 @@ I recently spent several days updating the Core, it's almost completely over, bu
 
 # What has changed in this update?
 
-I added the "Events" folder, made the commands more organized, added Aliases to the commands, added the "guildMemberAdd" event and several other things (I recently removed from the Core repository, the `package.json` and` package-lock files .json` because I found it unnecessary to keep them here).
+I added the "Events" folder, made the commands more organized, added Aliases to the commands, added the "guildMemberAdd" event and other things (I recently removed from the Core repository, the `package.json` and` package-lock files .json` because I found it unnecessary to keep them here).
+
+# What version of discord.js?
+
+`v12.3.1`
+
+# Main commands for structuring a Discord bot in the terminal
+
+`$ npm init`
+
+`$ npm install discord.js --save`
+
+# For more information on creating a discord bot visit:
+
+www.discordjs.guide
