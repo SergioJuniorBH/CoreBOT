@@ -18,12 +18,6 @@ I added the "Events" folder, made the commands more organized, added Aliases to 
 
 `v12.3.1`
 
-# Main commands for structuring a Discord bot in the terminal
-
-`$ npm init`
-
-`$ npm install discord.js --save`
-
 # Core provisional website:
 
 http://eucore.glitch.me
