@@ -14,7 +14,7 @@ I recently spent several days updating the Core, it's almost completely over, bu
 
 I added the "Events" folder, made the commands more organized, added Aliases to the commands, added the "guildMemberRemove" event and other things (I recently removed from the Core repository, the `package.json` and` package-lock.json` because I found it unnecessary to keep them here).
 
-# What version of discord.js?
+# What is the version of discord.js?
 
 `v12.3.1`
 
