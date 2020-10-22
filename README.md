@@ -22,6 +22,6 @@ I added the "Events" folder, made the commands more organized, added Aliases to 
 
 http://eucore.glitch.me
 
-# For more information on creating a discord bot visit:
+# For more information on creating a discord bot in JavaScript visit:
 
 www.discordjs.guide
