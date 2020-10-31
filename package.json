@@ -1,0 +1,32 @@
+{
+  "name": "ruivo",
+  "version": "1.0.0",
+  "description": "bot do ruivo para discord",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruivo",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.3.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "fluent-ffmpeg": "^2.1.2",
+    "imageapi.js": "^1.0.19",
+    "ms": "^2.1.2",
+    "node-gyp": "^7.1.2",
+    "node.js": "0.0.1-security",
+    "python": "0.0.4",
+    "rebuild": "^0.1.2",
+    "salvage.db": "^1.2.4",
+    "yt-search": "^2.3.3",
+    "ytdl-core": "^3.4.0",
+    "ytdl-core-discord": "^1.2.3"
+  },
+  "devDependencies": {}
+}
