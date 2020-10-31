@@ -5,7 +5,7 @@ module.exports = async (bot, message) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(message.content == `<${bot.user.id}>` || message.content == `<@!${bot.user.id}>`) {
-        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é \`c!\`\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
+        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é \`%\`\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
     };
 
     if(message.content === "Oi Core") {
