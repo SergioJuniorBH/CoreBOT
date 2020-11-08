@@ -28,6 +28,6 @@ http://eucore.glitch.me
 # Support server:
 https://discord.gg/NkzUCsM
 
-# For more information on creating a discord bot in JavaScript visit:
+# For more information on creating a discord bot in discord.js visit:
 
 www.discordjs.guide
