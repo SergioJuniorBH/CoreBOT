@@ -7,7 +7,6 @@ const bot = new Discord.Client({
     disableEveryone: true
 });
 const prefix = (config.default_prefix)
-const { addexp } = require('./handlers/xp');
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
