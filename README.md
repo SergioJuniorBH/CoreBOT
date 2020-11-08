@@ -1,6 +1,9 @@
 # Core
 Discord bot
 
+# Version
+3.0.0
+
 # What is?
 Core is a project of mine that since I started using the platform: "Discord". I wanted to do it, a bot for Discord.
 
