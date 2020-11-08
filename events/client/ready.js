@@ -1,13 +1,10 @@
 const Discord = require('discord.js')
 const {default_prefix} = require('../../config.json');
-const db = require('quick.db')
 
 module.exports = async (bot, message) => {
-    let prefix = db.get(`prefix_${message.guild.id}`)
-    if(prefix === null) prefix = default_prefix;
 
     var activities = [
-        `Utilize ${prefix}help`,
+        `Utilize ${default_prefix}help`,
         `${bot.guilds.cache.size} servidores`,
         `${bot.users.cache.size} usuários`,
         `Sabia que meu jogo favorito é The Last of Us 2?`,
