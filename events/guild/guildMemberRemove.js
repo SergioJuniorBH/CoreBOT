@@ -1,23 +1,21 @@
 const Discord = require('discord.js');
+const db = require('quick.db');
 
-module.exports = (bot, member) => {
-    let guild = bot.guilds.cache.get("703809493279965215"); //GUILD ID
-    let channel = bot.channels.cache.get("722501731904258110"); //CHANNEL ID
-    let emoji = member.guild.emojis.cache.find(emoji => emoji.name === 'lealspb'); //EMOJI ID
+module.exports = (bot, member, message) => {
+    let chy = db.get(`byechannel_${member.guild.id}`);
 
-if(guild != member.guild) {
-    return console.log('Alguém saiu do server.... não é esse.')
-} else {
+    if(chy === null) {
+        return;
+    }
 
     let embed = new Discord.MessageEmbed()
     .setColor("RED")
+    .setTitle("<:rip:766061024070729768> ALGUÉM NOS DEIXOU <:rip:766061024070729768>")
     .setAuthor(member.user.tag, member.user.displayAvatarURL())
-    .setTitle(`${emoji} ALGUÉM NOS DEIXOU ${emoji}`)
-    .setDescription(`${member.user} saiu do servidor ${guild.name}! Então agora estamos com ${member.guild.memberCount} membros.`)
+    .setDescription(`${member.user}, deixou nosso servidor. Então atualmente o servidor está com ${member.guild.memberCount} membros.`)
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024}))
     .setFooter('ID do usuário: ' + member.user.id)
     .setTimestamp();
 
-    channel.send(embed)
-}
+    bot.channels.cache.get(chy).send(embed)
 }

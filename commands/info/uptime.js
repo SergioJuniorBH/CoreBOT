@@ -9,10 +9,14 @@ module.exports = {
         let totalSeconds = bot.uptime / 1000;
         let days = Math.floor(totalSeconds / 86400);
         let hour = Math.floor(totalSeconds / 3600);
-        totalSeconds %= 3600;
+        totalSeconds % 3600;
         let minutes = Math.floor(totalSeconds / 60);
-        let seconds = totalSeconds % 60;
+        let seconds = Number.parseInt(totalSeconds % 60);
+
+        const embed = new Discord.MessageEmbed()
+        .setColor("BLUE")
+        .setDescription(`:sleeping:  Faz **${days} dias, ${hour} horas, ${minutes} minutos, ${seconds} segundos** que estou acordado`)
     
-        message.channel.send(`:sleeping:  Faz **${days} dias, ${hour} horas, ${minutes} minutos, ${seconds} segundos** que estou acordado.\n:yawning_face:  Ai ai, que sono...`)
+        message.channel.send(embed)
     }
 }

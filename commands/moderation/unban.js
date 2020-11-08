@@ -10,7 +10,7 @@ module.exports = {
         if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send(`<a:no:766016144720396389> | Eu não tenho permissão para desbanir usuários.`)
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
     
-        if(!args[0]) return message.channel.send(`<a:no:766016144720396389> | ${message.author.username}, forneça um usuário válido para ser desbanido!`)
+        if(!args[0]) return message.channel.send(`<a:no:766016144720396389> | ${message.author.username} forneça um usuário válido para ser desbanido!`)
     
         let bannedMember = await bot.users.fetch(args[0])
         if(!bannedMember) return message.channel.send(`:thinking: | Você precisa fornecer o ID do usuário que você quer desbanir.`)

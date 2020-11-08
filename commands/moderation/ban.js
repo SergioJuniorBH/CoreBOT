@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const db = require('quick.db');
 
 module.exports = {
     name: 'ban',
@@ -6,6 +7,8 @@ module.exports = {
     description: 'Ban someone',
     aliases: ['banir'],
     run: async (bot, message, args) => {
+        let chb = db.get(`banchannel_${message.guild.id}`) 
+
         let user = message.mentions.users.first()
         message.delete()
        var channel = bot.channels.cache.get("747902957055639645")
@@ -13,9 +16,9 @@ module.exports = {
        let membro2 = message.mentions.users.first() || bot.users.cache.get(args[0]);
        if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(`<a:no:766016144720396389> | Você, não tem permissão para banir.`)
        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-       if(!member) return message.reply(`:warning: | Mencione o usuário que você quer banir.`)
+       if(!member) return message.channel.send(`:warning: | Mencione o usuário que você quer banir.`)
        let motivooooooo = args[1];
-       if(!motivooooooo) return message.reply(`:warning: | Diga um motivo.`)
+       if(!motivooooooo) return message.channel.send(`:warning: | Diga um motivo.`)
        message.delete()
        let certeza = new Discord.MessageEmbed()
        .setColor('RED')
@@ -40,7 +43,10 @@ module.exports = {
             .setImage("https://media.tenor.com/images/048b3da98bfc09b882d3801cb8eb0c1f/tenor.gif")
             .setFooter(`Banido por: ${message.author.tag}`)
          
-            message.channel.send(embed)
+            bot.channels.cache.get(chb).send(embed)
+            if(!chb) {
+                return message.channel.send(embed)
+            }
          
             let banidoDM = new Discord.MessageEmbed()
             .setTitle(`<a:baniiido:761332235797921833> **BANIDO** <a:baniiido:761332235797921833>`)

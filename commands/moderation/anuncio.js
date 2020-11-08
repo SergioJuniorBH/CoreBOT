@@ -32,7 +32,7 @@ module.exports = {
                     .setColor('BLUE')
                     .setTitle(title)
                     .setDescription(desc)
-                    .setFooter("Anúncio feito por: "+message.author.username, message.author.displayAvatarURL({size: 32}))
+                    .setTimestamp()
 
                 bot.channels.cache.get(channel.id).send(anunciar)
  

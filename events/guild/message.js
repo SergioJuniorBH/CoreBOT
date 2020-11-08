@@ -1,16 +1,33 @@
-const {prefix} = require('../../config.json');
+const {default_prefix} = require('../../config.json');
 const Discord = require('discord.js');
+const db = require('quick.db');
+const { addexp } = require('../../handlers/xp');
 
 module.exports = async (bot, message) => {
+    let prefix = db.get(`prefix_${message.guild.id}`)
+    if(prefix === null) prefix = default_prefix;
+
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(message.content == `<${bot.user.id}>` || message.content == `<@!${bot.user.id}>`) {
-        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é \`%\`\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
+        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é **${prefix}**\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
     };
 
     if(message.content === "Oi Core") {
         message.channel.send(`:grin: | Eae, tudo bom?`)
     };
+
+    if(message.content === "Tô bem, e você Core?") {
+        message.channel.send(":grin: | Que ótimo, eu tô bem também, obrigado por perguntar.")
+    };
+
+    if(message.content === "Eu tô mal Core") {
+        message.channel.send(':frowning2: | Poxa... eu espero que você fique bem novamente.')
+    };
+
+    if(message.content === "Obrigado, Core") {
+        message.channel.send(':hugging: | Por nada, eu tô aqui para ajudar as pessoas.')
+    }
 
     if(!message.content.startsWith(prefix)) return;
 
@@ -25,4 +42,6 @@ module.exports = async (bot, message) => {
     }
 
     command.run(bot, message, args);
+    
+    return addexp(message)
 }
