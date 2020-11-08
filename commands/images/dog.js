@@ -5,6 +5,7 @@ module.exports = {
     name: 'dog',
     category: 'images',
     description: 'Dog command',
+    aliases: ['cachorros'],
     run: async (bot, message, args) => {
         let { body } = await superagent.get(`https://random.dog/woof.json`);
 
