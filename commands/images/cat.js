@@ -5,6 +5,7 @@ module.exports = {
     name: 'cat',
     category: 'images',
     description: 'Cat command',
+    aliases: ['gatos'],
     run: async (bot, message, args) => {
         let { body } = await superagent.get(`http://aws.random.cat/meow`);
 
