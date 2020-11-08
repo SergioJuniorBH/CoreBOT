@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const {default_prefix} = require('../../config.json');
 const db = require('quick.db')
 
-module.exports = async (bot) => {
+module.exports = async (bot, message) => {
     let prefix = db.get(`prefix_${message.guild.id}`)
     if(prefix === null) prefix = default_prefix;
 
