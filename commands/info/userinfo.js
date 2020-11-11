@@ -30,7 +30,7 @@ module.exports = {
             embed.setAuthor(`Informações sobre ${user}`)
             embed.setThumbnail(user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
             embed.addField('Tag do Usuário', user.tag, true)
-            embed.addField('Nickname', user.nickname', true)
+            embed.addField('Nickname', user.nickname, true)
             embed.addField('Criou sua Conta do Discord em', moment(user.createdTimestamp).format('DD/MM/YYYY'))
             embed.addField('ID', user.id, true)
             embed.addField('Status', user.presence.status, true)
