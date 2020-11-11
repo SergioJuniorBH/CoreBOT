@@ -19,6 +19,6 @@ module.exports = {
 
         db.delete(`warnings_${message.guild.id}_${user.id}`);
 
-        message.channel.send(`<a:yes:766016055855284274> | Alertas de ${user.username} foram limps com sucesso!`)
+        message.channel.send(`<a:yes:766016055855284274> | Alertas de ${user.username} foram limpos com sucesso!`)
     }
 }
