@@ -12,7 +12,7 @@ module.exports = async (bot, message) => {
     if(message.content == `<${bot.user.id}>` || message.content == `<@!${bot.user.id}>`) {
         const embedizin = new Discord.MessageEmbed()
         .setColor('YELLOW')
-        .setDescription(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é \`${prefix}`\`)
+        .setDescription(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é **${prefix}**`)
         .setTimestamp()
                         
         message.channel.send(embedizin)
