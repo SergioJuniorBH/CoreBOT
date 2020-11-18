@@ -10,12 +10,7 @@ module.exports = async (bot, message) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(message.content == `<${bot.user.id}>` || message.content == `<@!${bot.user.id}>`) {
-        const embedizin = new Discord.MessageEmbed()
-        .setColor('YELLOW')
-        .setDescription(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é **${prefix}**`)
-        .setTimestamp()
-                        
-        message.channel.send(embedizin)
+        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é **${prefix}**\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
     };
 
     if(message.content === "Oi Core") {
@@ -44,6 +39,10 @@ module.exports = async (bot, message) => {
         command = bot.commands.get(cmd);
     } else {
         command = bot.commands.get(bot.aliases.get(cmd));
+    }
+
+    if(!command) {
+        return message.channel.send(`:thinking: | Eu procurei em todo o meu HD, mas não achei o comando \`${cmd}\``)
     }
 
     command.run(bot, message, args);
