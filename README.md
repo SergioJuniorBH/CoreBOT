@@ -4,7 +4,7 @@ Discord bot
 # Version
 3.0.0
 
-# For more information on creating a discord bot in discord.js visit:
+# For more information on create a discord bot in discord.js visit:
 
 www.discordjs.guide
 
