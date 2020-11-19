@@ -5,6 +5,7 @@ module.exports = {
     category: 'miscellaneous',
     description: 'Make a embed message',
     run: async (bot, message, args) => {
+        message.delete()
         let argument = args.join(" ");
         if(!argument) {
             return message.channel.send('<:not_stonks:776890257198678017> | Você não especificou o conteúdo do embed')
