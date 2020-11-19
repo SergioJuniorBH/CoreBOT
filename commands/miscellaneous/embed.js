@@ -13,7 +13,7 @@ module.exports = {
         const persoEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setTitle('EMBED PERSONALIZADO')
-        .setAuthor(`Banner feito por ${message.author.username}`)
+        .setAuthor(`Embed feito por ${message.author.username}`)
         .setDescription(argument)
         .setTimestamp()
 
