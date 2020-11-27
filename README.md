@@ -13,4 +13,4 @@ https://discord.js.org
 
 # PS:
 
-I'm thinking in create music commands on Core
+I'm thinking in create music commands on Core and language command
