@@ -8,7 +8,9 @@ module.exports = {
     aliases: ['conquista'],
     run: async (bot, message, args) => {
         let [title, contents] = args.join(" ").split("|");
-  if (!contents) [title, contents] = ["Conquista desbloqueada!", title];
+  if (!contents) {
+      [title, contents] = ["Conquista desbloqueada!", title];
+  }
   let rnd = Math.floor((Math.random() * 39) + 1);
 
   if(args.join(" ").toLowerCase().includes("burn")) rnd = 38;
