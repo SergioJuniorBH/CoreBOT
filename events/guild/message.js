@@ -10,8 +10,16 @@ module.exports = async (bot, message) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(message.content == `<${bot.user.id}>` || message.content == `<@!${bot.user.id}>`) {
-        return message.channel.send(`:man_raising_hand: | Opa, me chamou?\nSe sim eu sou o Core, meu prefixo nesse servidor é **${prefix}**\nPara qualquer dúvida sobre mim, entre neste servidor: https://discord.gg/NkzUCsM \nAté mais!`)
-    };
+        const mentionEmbed = new Discord.MessageEmbed()
+        .setColor("YELLOW")
+        .setAuthor('Me chamou?')
+        .setDescription(`:man_raising_hand:  Oi, eu sou o Core, meu prefixo neste servidor é \`${prefix}\`\nCaso queira ver meus comandos, use \`${prefix}help\``)
+        .setTimestamp()
+
+        message.channel.send(mentionEmbed)
+    };    
+
+    if(!message.guild.me.hasPermission('ADMINISTRATOR')) return message.channel.send(`<a:no:766016144720396389> | Eu não tenho permissão de administador neste servidor!`)
 
     if(message.content === "Oi Core") {
         message.channel.send(`:grin: | Eae, tudo bom?`)
