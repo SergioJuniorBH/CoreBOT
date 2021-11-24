@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "ruivo",
+  "author": "artrfs",
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
