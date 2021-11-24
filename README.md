@@ -1,5 +1,5 @@
 # Core
-Discord bot
+Discord bot using discord.js v12
 
 # Version
 3.0.0
